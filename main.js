@@ -31,10 +31,10 @@ function uploadBackground(){
     ctx.drawImage(background_imgTag,0,0,canvas.width,canvas.height);
 }
 function uploadCar1(){
-    ctx.drawImage(car1_imgTag,0,0,car1_x,car1_y);
+    ctx.drawImage(car1_imgTag,car1_x,car1_y, car1_width, car1_height);
 }
 function uploadCar2(){
-    ctx.drawImage(car2_imgTag,0,0,car2_x,car2_y);
+    ctx.drawImage(car2_imgTag,car2_x,car2_y,car2_width,car2_height);
 }
 function my_keydown(e){
     key_pressed = e.keyCode;
