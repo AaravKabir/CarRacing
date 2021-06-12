@@ -37,7 +37,7 @@ function upload_Car1(){
 }
 function upload_Car2(){
     ctx.drawImage(car2_imgTag,car2_x,car2_y,car2_width,car2_height);
-}
+}window.addEventListener("keydown", my_keydown);
 function my_keydown(e){
     key_pressed = e.keyCode;
     console.log(key_pressed);
@@ -109,7 +109,7 @@ function my_keydown(e){
         }
         
         function Car1_right(){
-            if(car1_x <= 950){
+            if(car1_x <= 900){
                 car1_x = car1_x + 10;
                 console.log("When right arrow key is pressed, x = " + car1_x + "and y =" + car1_y)
                 upload_Background();
@@ -150,7 +150,7 @@ function my_keydown(e){
         }
         
         function Car2_right(){
-            if(car2_x <= 950){
+            if(car2_x <= 900){
                 car2_x = car2_x + 10;
                 console.log("When d key is pressed, x = " + car2_x + "and y =" + car2_y)
                 upload_Background();
@@ -158,8 +158,13 @@ function my_keydown(e){
                 upload_Car2();
             }
         }
-        if(car1_x >900)
+        if(car1_x == 900)
         {
-            console.log("car1 Won")
+            console.log("car1 Won");
             document.getElementById('game_status').innerHTML = "Car 1 Won!!!";
+        }else if (car2_x == 900)
+        {
+            console.log("car1 won");
+            document.getElementById('game_status').innerHTML = "Car 2 Won!!!"
         }
+        
