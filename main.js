@@ -74,6 +74,15 @@ function my_keydown(e){
             Car2_right();
             console.log("d");
     }
+    if(car1_x > 700)
+        {
+            console.log("car1 Won");
+            document.getElementById('game_status').innerHTML = "Car 1 Won!!!";
+        }else if (car2_x > 700)
+        {
+            console.log("car2 won");
+            document.getElementById('game_status').innerHTML = "Car 2 Won!!!"
+        }
 }
 
 
@@ -158,13 +167,5 @@ function my_keydown(e){
                 upload_Car2();
             }
         }
-        if(car1_x == 700)
-        {
-            console.log("car1 Won");
-            document.getElementById('game_status').innerHTML = "Car 1 Won!!!";
-        }else if (car2_x == 700)
-        {
-            console.log("car2 won");
-            document.getElementById('game_status').innerHTML = "Car 2 Won!!!"
-        }
+        
         
